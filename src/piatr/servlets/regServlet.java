@@ -34,7 +34,7 @@ public class regServlet extends HttpServlet {
         response.setContentType("text");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        out.println("Hi, "+name+"!"+registration);
+        out.println("Hi, "+username+"!"+registration);
     }
     @Override
     public void destroy(){
