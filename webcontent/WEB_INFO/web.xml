@@ -5,6 +5,14 @@
     <servlet-name>myServlet</servlet-name>
     <servlet-class>piatr.servlets.myServlet</servlet-class>
 </servlet>
+    <servlet>
+        <servlet-name>regServlet</servlet-name>
+        <servlet-class>piatr.servlets.regServlet</servlet-class>
+    </servlet>
+<servlet-mapping>
+    <servlet-name>regServlet</servlet-name>
+    <url-pattern>/rs.do</url-pattern>
+</servlet-mapping>
 <servlet-mapping>
     <servlet-name>myServlet</servlet-name>
     <url-pattern>/ms.do</url-pattern>
