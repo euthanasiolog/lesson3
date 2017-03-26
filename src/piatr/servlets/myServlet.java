@@ -33,10 +33,19 @@ public class myServlet extends HttpServlet {
             name = "WTF?";
             reg = "Smth wrong :(";
         } else {reg = "You are sign in.";}
-        response.setContentType("text");
+        String mail = request.getParameter(EMAIL);//пока просто на null проверяю, потом БД подключу, можно сверять будет(и пароль тоже)
+        if(mail.isEmpty()){
+            mail = "WTF?";
+            reg = "Email is bad :(";
+        } else {reg = "You are sign in."; mail = "";}
+        String pass = request.getParameter(PASSWORD);
+        if(pass.isEmpty()|pass.equals(" ")){
+            reg = "Password is to simple!";
+        }
+        response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
        PrintWriter out = response.getWriter();
-       out.println("Hi, "+name+"!"+reg);
+       out.println("Hi, "+name+"!"+mail+reg);
    }
    @Override
     public void destroy(){
