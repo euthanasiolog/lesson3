@@ -17,9 +17,9 @@ package piatr.servlets;
  import java.util.ArrayList;
 
 public class myServlet extends HttpServlet {
-    private String id;
-    private String email;
-    private String password;
+    private final String ID = "id";
+    private final String EMAIL = "email";
+    private final String PASSWORD = "password";
     private String reg;
     @Override
     public void init (ServletConfig config)throws ServletException{
@@ -28,7 +28,7 @@ public class myServlet extends HttpServlet {
    @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException{
         request.setCharacterEncoding("UTF-8");
-        String name = request.getParameter(id);
+        String name = request.getParameter(ID);
         if(name.equals("") ){
             name = "WTF?";
             reg = "Smth wrong :(";
