@@ -45,7 +45,14 @@ public class myServlet extends HttpServlet {
         response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
        PrintWriter out = response.getWriter();
+       out.println("<!DOCTYPE html>");
+       out.println("<head>");
+       out.println("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
+       out.println("<title>Registration</title>");
+       out.println("</head>");
+       out.println("<body>");
        out.println("Hi, "+name+"!"+mail+reg);
+       out.println("</body>");
    }
    @Override
     public void destroy(){

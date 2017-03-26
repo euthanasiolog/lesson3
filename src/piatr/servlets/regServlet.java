@@ -31,10 +31,10 @@ public class regServlet extends HttpServlet {
             username = "WTF?";
             registration = "Smth wrong :(";
         } else {registration = "You registration is OK.";}
-        response.setContentType("text");
+        response.setContentType("text/html");
         response.setCharacterEncoding("UTF-8");
         PrintWriter out = response.getWriter();
-        out.println("Hi, "+username+"!"+registration);
+        out.println("<div>Hi, "+username+registration+"</div>");
     }
     @Override
     public void destroy(){
