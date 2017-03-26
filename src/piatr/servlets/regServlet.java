@@ -12,12 +12,12 @@ import java.io.PrintWriter;
  * Created by piatr on 26.03.17.
  */
 public class regServlet extends HttpServlet {
-    private String username;
-    private String email;
-    private String firstname;
-    private String lastname;
-    private String password;
-    private String cpassword;
+    private final String USERNAME = "username";
+    private final String EMAIL = "email";   //вот когда БД с юзерами будет,
+    private final String FIRSTNAME = "firstname";//тогда и использую эти параметры,
+    private final String LASTNAME = "lastname";//а пока смысла нет с ними
+    private final String PASSWORD = "password";//работать, но они
+    private final String CPASSWORD = "cpassword";//пригодятся еще))
     private String registration;
     @Override
     public void init (ServletConfig config)throws ServletException {
@@ -26,9 +26,9 @@ public class regServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)throws ServletException,IOException {
         request.setCharacterEncoding("UTF-8");
-        String nickname = request.getParameter(username);
+        String username = request.getParameter(USERNAME);
         if(username.equals("") ){
-            nickname = "WTF?";
+            username = "WTF?";
             registration = "Smth wrong :(";
         } else {registration = "You registration is OK.";}
         response.setContentType("text");
