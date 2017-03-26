@@ -6,18 +6,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
 </head>
 <body>
-    <form id="signIn" action="../scripts/signIn.js">
+    <div id="signIn">
         <p><label for="id">Введите никнейм: </label><br>
             <input id="id" type="text" required></p>
         <p><label for="eMail">Введите адрес электронной почты: </label><br>
         <input id="eMail" type="email" required></p>
         <p><label for="password">Введите пароль: </label><br>
         <input id="password" type="password" required>
-        </p>
-        <input type="submit">
-        <input type="reset">
-    </form>
-<div id="ok">
+    </p>
+        <button id="sign" onclick="signIn()">Sign in</button>
+    </div>
+<div id="reg">
+    <p></p>
+    <label for="registration"><tt>Не зарегестрированы? </tt></label><br>
+    <a id="registration" href="registration.html">Регистрация</a>
 </div>
 </body>
 </html>

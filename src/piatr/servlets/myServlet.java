@@ -5,6 +5,7 @@ package piatr.servlets;
  */
 
  import com.sun.deploy.util.StringUtils;
+ import piatr.User;
 
  import javax.servlet.ServletConfig;
  import javax.servlet.ServletException;
@@ -13,6 +14,7 @@ package piatr.servlets;
  import javax.servlet.http.HttpServletResponse;
  import java.io.IOException;
  import java.io.PrintWriter;
+ import java.util.ArrayList;
 
 public class myServlet extends HttpServlet {
     private String id;
